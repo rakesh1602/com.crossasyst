@@ -1,3 +1,5 @@
+package com.codingchallenges.nagesh;
+
 public class CreditCard {
     public String checkCreditCard(String Number){
         char ch=Number.charAt(0);
