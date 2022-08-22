@@ -1,8 +1,6 @@
 package com.codingchallenges.nagesh;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class PostgreSQLJDBCConnection {
     private final String url="jdbc:postgresql://localhost:5432/crossasyst";
@@ -14,15 +12,12 @@ public class PostgreSQLJDBCConnection {
         try{
             Class.forName("org.postgresql.Driver");
             con= DriverManager.getConnection("jdbc:postgresql://localhost:5432/demo","postgres","1234");
-            if(con!=null){
-                System.out.println("Connected");
-            } else {
-                System.out.println("Not connceted");
+            Statement st=con.createStatement();
+            ResultSet rs=st.executeQuery("select * from person ");
+            while (rs.next()){
+                System.out.println(rs.getInt(1)+rs.getString(2));
             }
-
-
         }
-
         catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }

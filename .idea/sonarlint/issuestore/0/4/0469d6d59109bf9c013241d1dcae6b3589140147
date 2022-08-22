@@ -1,0 +1,11 @@
+
+u
+java:S4165	"`Remove this useless assignment; "n2" already holds the assigned value along all execution paths.(©V
+K
+java:S1854	"6Remove this useless assignment to local variable "n2".(©V
+K
+java:S1854"6Remove this useless assignment to local variable "n3".(©Συ
+T
+java:S1659"?Declare "n2" and all following declarations on a separate line.(ÿ¨Τj
+<
+java:S1481"'Remove this unused "n3" local variable.(©Συ
