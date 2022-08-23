@@ -51,3 +51,9 @@ s
 Csrc/main/java/com/codingchallenges/nagesh/ConstructorChainning.java,a\b\ab365f40f0010cff31e897f470b131559fd2c4bc
 w
 Gsrc/main/java/com/codingchallenges/nagesh/PostgreSQLJDBCConnection.java,b\6\b6420dcba3a69660f4ad459727a3292c03776968
+w
+G.idea/sonarlint/issuestore/e/e/ee94455ae2b207fc2145c66c3d616167f0894521,2\9\292beecfd1ac615b7da392da35189a8a7d1ddbe0
+w
+G.idea/sonarlint/issuestore/d/6/d636663fa203616bd87aa17d12d9c3c66db1cde5,4\8\48524b0c17666a3b054c797613470bca71dbfabd
+w
+G.idea/sonarlint/issuestore/e/9/e90e6f4d788d26cec1a020e339abdf4263f4c0e8,8\c\8cfbf09f63dfa02122db71cf1b44c701d8f4b0b1
