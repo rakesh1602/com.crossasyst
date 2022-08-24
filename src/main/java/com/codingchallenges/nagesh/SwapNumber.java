@@ -1,7 +1,5 @@
 package com.codingchallenges.nagesh;
 
-import lombok.extern.log4j.Log4j2;
-
 import java.util.Scanner;
 
 public class SwapNumber {

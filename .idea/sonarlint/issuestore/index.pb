@@ -33,8 +33,6 @@ g
 7src/test/java/com/freecodecamp/test/CarServiceTest.java,d\a\dac75507911ea9fba6a48b2165a43668d33f3791
 d
 4src/test/java/com/freecodecamp/test/CarSelector.java,e\9\e90e6f4d788d26cec1a020e339abdf4263f4c0e8
-i
-9src/main/java/com/codingchallenges/nagesh/SwapNumber.java,b\a\ba1783a02b16eae6215ddc2ea25dad2ac0c9048d
 w
 G.idea/sonarlint/issuestore/8/c/8c79be523c1e96ecb0894de495fc95900f80afc0,3\4\34230d54700667fcbb5e22871e57b0f161e52619
 w
@@ -47,8 +45,6 @@ w
 G.idea/sonarlint/issuestore/3/1/312647542a1c57412e40081c9edfd17a18cce7fc,9\1\91b33ae3fbe3b3cf91c1df933b3dcd8a506c0947
 w
 G.idea/sonarlint/issuestore/9/c/9c68215d63de1b47c3124522be29a3ed57035824,9\5\954e8d3fd320f5038bfecdbc8cf58e37d9441267
-s
-Csrc/main/java/com/codingchallenges/nagesh/ConstructorChainning.java,a\b\ab365f40f0010cff31e897f470b131559fd2c4bc
 w
 Gsrc/main/java/com/codingchallenges/nagesh/PostgreSQLJDBCConnection.java,b\6\b6420dcba3a69660f4ad459727a3292c03776968
 w
@@ -57,3 +53,17 @@ w
 G.idea/sonarlint/issuestore/d/6/d636663fa203616bd87aa17d12d9c3c66db1cde5,4\8\48524b0c17666a3b054c797613470bca71dbfabd
 w
 G.idea/sonarlint/issuestore/e/9/e90e6f4d788d26cec1a020e339abdf4263f4c0e8,8\c\8cfbf09f63dfa02122db71cf1b44c701d8f4b0b1
+k
+;src/main/java/com/codingchallenges/nagesh/RandomNumber.java,3\4\3428796eda514d081ae242077aae9a3720c3f375
+r
+Bsrc/main/java/com/codingchallenges/nagesh/IntegerDefaultValue.java,4\9\49752c6639ac3ab8251f8c363c0130c88989a31f
+\
+,src/main/java/com/freecodecamp/org/Name.java,3\4\347470b360f74571984fee6336639fdd2480af43
+c
+3src/main/java/com/java8Features/CalculatorIMP1.java,5\7\577a5def1cfcca2e30b5ec577dce61f2705a1f41
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+d
+4src/main/java/com/freecodecamp/org/ComparePract.java,8\e\8efc2871d91d2bfebdac891af8a55dd6b6c96318
+a
+1src/main/java/com/java8Features/ComparePract.java,4\4\440fa71337fee8915c081025e70391a9f059e035
