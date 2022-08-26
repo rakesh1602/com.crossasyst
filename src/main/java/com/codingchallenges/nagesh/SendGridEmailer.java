@@ -10,11 +10,11 @@ public class SendGridEmailer {
     public static void main(String[] args) throws IOException {
 
         Email from = new Email("rakesh.chavan776@gmail.com");
-        String email[] = {"suchitkhadtar12@gmail.com", "rac16021999@gmail.com", "raj.bokade@crossasyst.com"};
+        String email[] = {"rac16021999@gmail.com"};
         for (int i = 0; i <= email.length; i++) {
             Email to = new Email(email[i]); // use your own email address here
             String subject = "Sending with Twilio SendGrid is Fun";
-            Content content = new Content("text/html", "Hi Suchit, This message is from Twilio.");
+            Content content = new Content("text/html", "Hi, This mail is sended after deleting API key from sendgrid.");
             Mail mail = new Mail(from, subject, to, content);
 
             SendGrid sg = new SendGrid(System.getenv("SENDGRID_API_KEY"));

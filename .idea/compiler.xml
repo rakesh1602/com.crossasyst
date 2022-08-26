@@ -13,7 +13,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="ForJunit" options="--add-exports java.base/sun.net.www.protocol.http=ALL-UNNAMED" />
+      <module name="ForJunit" options="" />
     </option>
   </component>
 </project>
