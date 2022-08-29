@@ -1,9 +1,6 @@
 package com.freecodecamp.test;
 
 
-import com.freecodecamp.org.Name;
-import org.junit.Test;
-
 public class Person {
 
     private static final int PENDING=43;
@@ -11,7 +8,7 @@ public class Person {
 
 
 
-    private Name personName;
+    //private Name personName;
     private int personcounter;
 
 
@@ -29,10 +26,10 @@ public class Person {
 
     }
 
-    public Name name() {
+    /*public Name name() {
         return personName;
     }
-
+*/
 /* public String hello() {
         Name n = new Name();
         n.personName();
