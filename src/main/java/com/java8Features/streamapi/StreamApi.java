@@ -10,6 +10,7 @@ import static com.java8Features.streamapi.EmployeeDAO.getEmployee;
 @Log4j2
 public class StreamApi {
     public static Object moreSalay(){
+
         return getEmployee().stream().filter(employee -> employee.getSalary()==5000).collect(Collectors.toList());
     }
 

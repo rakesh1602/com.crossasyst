@@ -36,6 +36,48 @@ Stream In Java
 2. list.stream().filter(t->t.startsWith("R")).forEach(t->log.info(t));
 
 filter method - 
+
+Sorting of list ------>>>
+
 1. it is used to filter with if else condition.
 
 2. return getEmployee().stream().filter(employee -> employee.getSalary()==5000).collect(Collectors.toList());
+
+Sorting of MAP -------->>>
+
+Map -- One to one mapping.
+flatMap() -- One to many mampping.
+
+Data Transformation -- Stream of("a", "b", "c") -->Mapping --[A,B,C]-->Returning it as another string is known as Data Transformation
+
+flattering --- {[1,2], [2,3], [4,5]} --->[1,2,3,4,5]--Convert stream into single stream.
+
+List<String> phoneNumber=customers.stream().map(customer -> customer.getPhoneNumber()).collect(Collectors.toList());
+        log.info(phoneNumber);
+
+Optional in java --->> To avoid NullPointerException we use optional
+
+Why Optional ?
+class Customer {
+int id ;
+String name ;
+// constructor
+// Getter & Setter
+}
+class Test {
+public static void main ( String [ ] args ) {
+   Customer customer1 = new Customer ( 101 , " abc " ) ;
+   customer1.getField ( ) -- > will give data
+   Customer customer2 = new Customer ( 101 , null ) ;
+   String name = customer2.getName ( ) -- > will give null
+   // make uppercase
+   ' name.toupperCaséu : - > will give NullPointerException
+
+Map and Reduce function 
+
+
+Java Parallel Strem--It meant for utilizing mulitple coreje of processer.
+
+Sequential Stream will use one core in multiple thread .
+Parallel Stream will use multiple core for multiple thread.
+
