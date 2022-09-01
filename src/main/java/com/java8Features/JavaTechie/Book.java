@@ -1,4 +1,4 @@
-package com.java8Features;
+package com.java8Features.JavaTechie;
 
 import lombok.Getter;
 import lombok.Setter;

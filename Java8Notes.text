@@ -1,0 +1,41 @@
+Java 8 Features
+
+Lambda Expression - 
+1.The expression through which we can express Anonymous Function.
+	Anonymous : Nameless/Unknown function.
+	Syntax --
+	Parameter () Expression -> Body sysout(" ")
+        call the method
+
+2. Lambda funtion can be return only for functional interface, can write for other.
+
+3. Functional interface -- Inteface with only one abstract method but multiple default method and static method.
+	eg -	Runnable -- Run()
+		Comparable --Compare to Method 
+
+Consumer Functional Interface -
+1. It is inbuilt function all in Java8, It is used when some operation has to perform on object without returning any result.
+2. void accept(T t) //can take anytype of genericis.
+3. It also contain default method.
+
+Predicate Functional Interface -
+1. It is use for conditional check.
+2. It is use to check true or false condition.
+3. Boolean test(T t)
+
+Supplier Functional Interface -
+1. It is use when there is not input but Return expected
+
+T get();
+
+
+Stream In Java 
+1. It is used to process collection of object, it is a sequenDce of object that support various methods which can be piplined to produce desire result.
+ Why Need - to achieve functional programming, Code  reduce, Bulk operations,
+ 	    it contain pipeline methods.
+2. list.stream().filter(t->t.startsWith("R")).forEach(t->log.info(t));
+
+filter method - 
+1. it is used to filter with if else condition.
+
+2. return getEmployee().stream().filter(employee -> employee.getSalary()==5000).collect(Collectors.toList());
