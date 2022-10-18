@@ -1,0 +1,29 @@
+Jmeter :-
+Performance test application puerly based on java. can be use from the CLI.
+
+How to install -
+1. Check Java -Download from Apache Jmeter-Unzip -start by using
+windows - jmeter/bin -jmeter.bat
+or 
+Double click on bat file of Jmeter.
+
+How to create first Jmetet Test
+
+1. Start Jmeter.
+2. Create Test Plan by click on File - new.
+3. Create Thread group by right clicking on thread group
+4. Thread group -- right click--sampler--type of request
+5. Listner - right click-add-listner.
+
+Post Request --
+1. Right click on thread group -- add --config listner -- Https header manager
+2. click on HTTP request -- body to add json values.
+
+
+
+Thread Group - It is group of thread that will run during test -
+Number of threads (the number of users you are testing).
+
+Ramp-up time - (how much time you want to allow the Thread Group to go from 0 to 3 users).
+
+Loop count (How many times the test should be looped).

@@ -1,0 +1,142 @@
+Apache Kafka -- Developed by LindkedIn -given to apache
+
+- It is distributed streaming platform.
+
+- To start in cmd --   .\bin\windows\kafka-server-start.bat .\config\server.properties
+                  --    .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+- To create Topic -- .\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test- Producer-- .\bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic example
+(repitatiaon factor --no of copies of each partitions)
+- Consumers -- .\bin\windows\kafka-console-consumer.bat  --topic example --bootstrap-server localhost:9092 --from-beginning
+
+http://localhost:8080/rest/api/producerMsg?message=%22congrates%22
+
+----------------------------------------------------------
+
+Main Work -
+Source System -----> Data ----> Target System
+
+Suppose there are -
+
+Many source system --->Data transfer will become complicated--->Many target system
+Each source system will have an incresed load from the connections.
+
+Then Apache kafta came -
+
+		-----Data------
+Source sytem ------>Apache Kafta--->target system
+
+-------------------------------------------------------------
+Why kafka -
+- Horizontal Scaling 
+Can scale to 100s of brokers
+Can scale millions of messgage per second
+
+- High Performance
+
+-------------------------------------------------------------
+
+Use Cases -
+1. Messaging system
+2. Activity tracking
+3. To gather metrics from diff locations
+4. Application Logs gathering
+5. Stream processing
+
+-------------------------------------------------------------
+Examples -
+Netflix - To get real time users data and show recommendation
+uber - to get real time peak datas
+linkedin - To make better connection recommendation.
+
+------------------------------------------------------------------
+
+Kafka Ecosystem - Kafa core
+
+Source system --Producer -- Kafka --Consumer -- Target system
+
+---------------------------------------------------------------------
+
+Brokers -- It just meaningfull name given to the kafka server.
+
+
+- A kafka cluster contain multiple brokers (Servers)
+- Each broker contain unqiue id.
+- Each broker contain topic partitions.
+- After connecting to any broker, you will connect to the entire cluster.
+
+---------------------------------------------------------------------------
+
+Producers -
+
+Producers write data to topic.
+They will have to specify the topic name and one broker to connect to, and kafka will
+automatically take care of routing the data to right brokers.
+
+	  Send Data
+Producers ---------->Broker 1, 2,3 ----Writes
+Load balance is automatic done by the brokers.
+
+Producers can choose to recevie acknowledgement of data writes
+Acks=0 - won't wait fro teh acknowledgment
+Acks =1 - will wait
+Acks=all: Leader + replicas acknowledgment.
+
+
+------------->
+
+Producers:Message Keys
+Producers can choose to send a key with the message. key is a customer_id
+If a key is sent, then producer have gurrenty that all the message with key will always go to the same partition.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Consumers ----------->
+
+Consumers read the data from a topic.
+They have to specify topic name and one broker to connect to, apache will take.
+
+Topic ---->
+In Kafka, the word topic refers to a category or a common name used to store and publish a particular stream of data.
+
+Cluster ----->
+- Kafka is a group of computers, each running one instance of the kafka brokers.
+- A Kafka cluster is a system that consists of several Brokers, Topics, and Partitions for both
+
+Topic ---> It is uqique name for data stream.
+- Consumer will ask for the topic same as table in sql.
+
+Partitions -- > 
+- There can be large amount of the data even bigger than the storage capacity of the computer,
+so kafka divides the topic in different partitions.
+- It is tool for the scalability.
+
+- We decide the partitions during topic creation.
+
+Partitions offset -->
+- It is unqiue sequence id of a meassgae in the partitions. Seq id is automatically assigned.
+
+Consumer Group --------->
+- Suppose there are more work load then each work load is share the load to the multiple consumers.
+Each consumer within a group read from exclusive partitions.
+You can not have more consumers than partitions.(otherwise will become inactive).
+
+Topic 1          Topic 1 	Topic 1
+Partition 0  Partition 1     Partition 2
+|    
+Cons 1 Cons2
+consumer 1 will read partition0, cons2 will read partition1 and so on
+
+
+Consumer offsets
+
+- Kafta stores the offset at which a consumer group has been reading.
+- It stored the offset in name kafta topic names "--consumers--offsets"
+- when consumer process the data consumer it should be commiting the offset
+- if consumer process die it will ne able to read from where it left.
+
+----------------------------------------------------------------------------------------------------------
+
+Apache is open source 
+Other we can use --paid---confluent.io, amazon, aiven.io
+
+----------------------------------------------------------------------------------------------------------

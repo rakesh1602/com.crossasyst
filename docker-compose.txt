@@ -1,0 +1,14 @@
+Docker Compose
+
+- It is the tool for defining and running multi container docker application.
+- It uses yml to configure all the services
+- It can start/stop all the services with single command.
+- It can scale up selected service when required.
+
+C:\Users\User>docker-compose -v
+Docker Compose version v2.10.2
+
+if not installed - 
+-  https://www.youtube.com/watch?v=HUpIoF_conA
+-  pip install -U docker-compose
+-  https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbXJ3ZzhMNlB5bkNJQncyOUI4N0VtMkhhT0ZGQXxBQ3Jtc0tsdXpmVHZfcFZXQ1NUZHl5dE9GbnhHN2dQOWl5YkdXOEZERE9BMXE4OXlUeVVOU1dxTnBBVENVLUVrQXhLaWtocDc2dGtLcWx0SWVUS3l3a1VqYXY2bDRfTFhTMjVKRnBiMW5MaEZNcmdZYXJ4WGJEaw&q=https%3A%2F%2Fgithub.com%2Fdocker%2Fcompose%2Freleases&v=HUpIoF_conA

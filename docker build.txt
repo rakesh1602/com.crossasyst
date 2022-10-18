@@ -1,0 +1,19 @@
+How to upload Docker file 
+
+1. create dockerfile in project folder
+FROM openjdk:8-jdk-alpine
+COPY target/docker-message-server-1.0.0.jar message-server-1.0.0.jar
+ENTRYPOINT ["java","-jar","/message-server-1.0.0.jar"]
+
+2. mvn clean install on that folder
+3. run - docker build -f dockerfile.txt --tag=message-serve:1.0.0 .
+4. check - docker images
+5. run - docker run -d -p port:port image id
+6. check - docker ps
+
+
+How to push
+docker tag newresttemplate:1.0.0 rk1602/newresttemplate:1.0.0
+rename to - username/repo:tag
+
+docker push username/repo:tag

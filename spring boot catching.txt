@@ -1,0 +1,67 @@
+Spring Boot Caching --
+
+Example --
+Suppose there is emp with id 1 to get his details we will hit to the database,
+but if we need again with id 1, then we will not the query to the database again,
+this query will be stored in the memory.
+
+Catching keeps frequntly acceessed object, images and data close to you when you need them,
+Between client and server
+Application layer and database layer
+
+When to use -
+When there is a repetitve data return for same input,
+to save monetary cost,
+to improve latency among layers
+
+--------------------------------------------------------------------------------------
+
+Catche Annotatiton -
+
+@EnableCatching
+1. Enable the catche for application
+
+@Cacheable
+2. It is used with the methods that are catcheable
+
+@Catcheable({key="books", value=""isbns"})
+public book findBook(Book books){
+}
+
+--if we get the books in first call and if we call it again then spring will check of
+it was called earlier then will show the output.
+
+3. 
+@CatchePut(cacheName="book",key="isbn")
+public book findBook(Book books){
+}
+
+-  This method is use while updating.
+
+4.
+@CatcheEvict(catchName="books", allEntries=true)
+- It is use to clear the cache values from cache storage.
+
+5. 
+@Catching 
+- It is use to use multiple annoatation of the same type such as @CatcheEvict or @CatchePut
+
+
+6.CatchConfig - It is a class level annotation it will apply to the all the method of class.
+
+--------------------------------------------------------------------------------------------------
+
+Dependancy 
+
+Catche - spring catche abstraction
+
+------------------------------------------------------------------------
+
+Annoations Using-
+
+1. First enable catching in the main spring application.
+by @EnableCatching
+
+
+
+size, evication

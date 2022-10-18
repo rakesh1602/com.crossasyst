@@ -1,0 +1,31 @@
+gRPC-
+
+- It can directly call a method on server application as if it were a local project.
+
+ 
+- Google Remote Procedure Call,free and open-source framework developed by the google.
+- It allows youe define Request and Response for RPC and handle the rest for you.
+- It can efficiently connect services in and across data centere with pluggable support for 
+balancing, tracing , health checking and authentication.
+
+Protocol Buffers -
+- It is the language same as the json.
+- It uses the Interface defination language(Describe once and gen interfaces for any lang).\
+- It uses binary format for network transmission.
+
+
+Core Concepts -
+- It is based on idea of definig the service, specifying the method that can be called remotely with
+threre parameter and return type
+
+service HelloService {
+  rpc SayHello (HelloRequest) returns (HelloResponse);
+}
+
+message HelloRequest {
+  string greeting = 1;
+}
+
+message HelloResponse {
+  string reply = 1;
+}

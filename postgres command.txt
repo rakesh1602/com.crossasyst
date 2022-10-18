@@ -1,0 +1,28 @@
+Docker Postgress Commands ---
+
+1. To check docker version
+docker --version
+
+2. To check docker images (postgres) 
+docker images 
+
+3. To run docker 
+docker run --name postgres-0 -e POSTGRES_PASSWORD -d -p 5432:5432 postgres
+
+4. To check containers
+docker ps
+
+5. To execute postgres
+docker exec -it postgres-cG6Z(CONTAINER NAME) bash
+
+6. In root - psql -U postgres
+
+6. create database - CREATE DATABASE dbname;
+
+7. \l to see list of databases
+
+9.  \c databasename - to use database
+
+10. \dt - to get the tables
+
+10. TO exit from contollrt ctrl+D

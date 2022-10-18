@@ -1,0 +1,12 @@
+if (item name is same)
+qty++
+
+if(item deleted)- if(qty is > 0)
+qty--
+
+delete by item name
+get by the item name
+add by the item name
+
+cart delete
+

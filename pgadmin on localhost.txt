@@ -1,0 +1,11 @@
+C:\Users\User>docker run --name postgres -e POSTGRES_PASSWORD=postgres -d postgres
+1d391b15a36f5955a21b68062cebf3f8759dab0acf83cd4d0f7acb99144964b3
+
+C:\Users\User>docker run -p 80:80 --link postgres -e "PGADMIN_DEFAULT_EMAIL=email@domain.com" -e "PGADMIN_DEFAULT_PASSWORD=postgres" -d dpage/pgadmin4
+42fcc8dd9bfc87a7cdad4908b51197e6b298962bcdccc5c3b39ce7735edbb283
+
+Open pg admin in localhost
+localhost:80
+172.17.0.2
+postgres
+postgre

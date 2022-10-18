@@ -1,0 +1,80 @@
+What is Lambda function ?
+- It is an anonymous function.
+- without names
+- without modifiers
+- without return type
+
+Is is applicable for only functional interface 
+Inteface contain only one abstract method but can have multiple default and static method.
+ex- Runnable -- run()
+    Comparable -- compareTo()
+
+syntax 
+
+() -> {body}
+
+exmaple -public static void main(String[] args) {
+        Lambda lambda = () -> {
+            log.info("Switch on from lambda");
+        };
+        lambda.switchOn();
+
+
+        Withinput withinput = (input, input2) -> log.info("sum is :" + input + input2);
+        withinput.sum(44, 44);
+
+
+        withReturn withReturn = (i1, i2) ->i1 * i2;
+        log.info(withReturn.multiply(33, 33));
+    }
+
+-----------------------------------------------------------------------------------------------------------------
+
+Consumer Functional Interface -
+1. It is inbuilt function all in Java8, It is used when some operation has to perform on object without returning any result.
+2. void accept(T t) //can take anytype of genericis.
+3. It also contain default method.
+
+Predicate Functional Interface -
+1. It is use for conditional check.
+2. It is use to check true or false condition.
+3. Boolean test(T t)
+
+Supplier Functional Interface -
+1. It is use when there is not input but Return expected
+
+T get();
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Stream in Java-
+
+- It is used to process the collection of objects.
+- It takes the input from the arrays.
+
+Why use ?
+- To achieve functional programming.
+- Code reduce
+- Bulk operation.
+
+Methods
+
+Filter - for conditional check
+forEach - for iterations
+
+Example -
+  public static void main(String[] args) {
+        List<String> list=new ArrayList<>();
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Chips");
+        list.add("Potato");
+
+        for (String s:list) {
+            log.info(s);
+        }
+
+ FOR EACH --->       list.stream().forEach(t ->log.info("from stream "+t));
+
+ USING FILTER ---->  list.stream().filter(t -> t.startsWith("p")).forEach(t->log.info("using filter "+t));
+    }

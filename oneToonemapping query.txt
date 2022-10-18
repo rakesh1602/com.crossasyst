@@ -1,0 +1,17 @@
+post -
+Hibernate: select nextval ('seq_person_id')
+Hibernate: select nextval ('seq_address_id')
+Hibernate: insert into address (address_one, address_two, city, state, zip_code, id) values (?, ?, ?, ?, ?, ?)
+Hibernate: insert into person (address_id, first_name, last_name, id) values (?, ?, ?, ?)
+
+
+GET
+Hibernate: select personenti0_.id as id1_1_0_, personenti0_.address_id as address_4_1_0_, personenti0_.first_name as first_na2_1_0_, personenti0_.last_name as last_nam3_1_0_, addressent1_.id as id1_0_1_, addressent1_.address_one as address_2_0_1_, addressent1_.address_two as address_3_0_1_, addressent1_.city as city4_0_1_, addressent1_.state as state5_0_1_, addressent1_.zip_code as zip_code6_0_1_ from person personenti0_ left outer join address addressent1_ on personenti0_.address_id=addressent1_.id where personenti0_.id=?
+
+Delete -
+Hibernate: delete from person where id=?
+Hibernate: delete from address where id=?
+
+Put -
+update address set address_one=?, address_two=?, city=?, state=?, zip_code=? where id=?
+2022-09-26 10:47:38.989  INFO 8136 --- [nio-9191-exec-8] c.e.o.service.PersonAddressService       : Updated
